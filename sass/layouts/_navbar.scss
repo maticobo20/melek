@@ -1,0 +1,162 @@
+header {
+    .back {
+        padding: 32px 0;
+        background-color: $primary-color;
+        font-weight: 700;
+    }
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+    }
+    a {
+        color: $secundary-color;
+        .logo {
+            font-size: 24px;
+            text-transform: uppercase;
+            &:hover {
+                color: $terciario-color;
+            }
+        }
+    }
+    .menu {
+        .navbar {
+            --bs-navbar-padding-y: 0;
+            ul {
+                li {
+                    position: relative;
+                    float: left;
+                    a {
+                        padding: 20px;
+                        color: $secundary-color;
+                        display: block;
+                        &:hover {
+                            color: $terciario-color;
+                        }
+                    }
+                }
+            }
+        }
+        label {
+            display: none;
+            cursor: pointer;
+        }
+    }
+    .uldl, ol, ul {
+        margin-bottom: 0;
+    }
+    #menu {
+        display: none;
+    }
+    .menu-icono {
+        width: 25px;
+        margin-right: 40px;
+    }
+    @include tablet {
+        a {
+            .logo {
+                padding: 10px
+            }
+        }
+        .menu {
+            padding: 30px;
+            label {
+                display: initial;
+            }
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: $primary-color;
+                display: none;
+                ul {
+                    li {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        #menu:checked ~ .navbar {
+            display: initial;
+        }
+        .back {
+            padding: 47px 0;
+        }
+        
+    }
+    @include mobile {
+        a {
+            .logo {
+                padding: 5px;
+            }
+        }
+        .menu {
+            padding: 30px;
+            label {
+                display: initial;
+            }
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: $primary-color;
+                display: none;
+                width: 95%;
+                ul {
+                    li {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .back {
+            padding: 47px 0;
+        }
+        #menu:checked ~ .navbar {
+            display: initial;
+        }
+    }
+    @include mobile1 {
+        .menu {
+            padding: 30px;
+            label {
+                display: initial;
+            }
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: $primary-color;
+                display: none;
+                width: 95%;
+                ul {
+                    li {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .menu-icono {
+            margin-right: 0;
+        }
+        .back {
+            padding: 47px 0;
+        }
+        #menu:checked ~ .navbar {
+            display: initial;
+        }
+    }
+}

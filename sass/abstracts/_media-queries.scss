@@ -1,0 +1,15 @@
+@mixin tablet {
+    @media (600px <= width <= 1400px) {
+        @content
+    }
+}
+@mixin mobile {
+    @media (500px <= width <= 600px) {
+        @content
+    }
+}
+@mixin mobile1 {
+    @media (320px <= width <= 500px) {
+        @content
+    }
+}
